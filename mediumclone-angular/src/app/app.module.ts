@@ -16,7 +16,9 @@ import { AuthModule } from './auth/auth.module';
     AppRoutingModule,
     AuthModule,
     StoreModule.forRoot([]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    StoreDevtoolsModule.instrument({ 
+      maxAge: 25, 
+      logOnly: !isDevMode() }),
   ],
   providers: [],
   bootstrap: [AppComponent]
