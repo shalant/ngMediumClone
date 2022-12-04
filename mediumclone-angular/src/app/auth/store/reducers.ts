@@ -1,5 +1,5 @@
-import { state } from "@angular/animations";
-import { createReducer, on } from "@ngrx/store";
+import { createReducer, on, Action } from "@ngrx/store";
+
 import { AuthStateInterface } from "../types/authState.interface";
 import { registerAction } from "./actions";
 
@@ -17,3 +17,7 @@ const authReducer = createReducer(
         })
     )
 )
+
+export function reducers(state: AuthStateInterface, action: Action) {
+    return authReducer(state, action)
+}
